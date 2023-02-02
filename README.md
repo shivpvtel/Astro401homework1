@@ -133,7 +133,7 @@ plt.show()
 ```
 
 **Case 1**
-![Alt text](case 1/case1.jpg?raw=true "Case 1")
+ <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="600" height="300"/>
 
 **Case 2**
 case2.jpeg
