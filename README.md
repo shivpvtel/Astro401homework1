@@ -133,7 +133,7 @@ plt.show()
 ```
 
 **Case 1**
-case1.jpeg
+https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg
 
 **Case 2**
 case2.jpeg
