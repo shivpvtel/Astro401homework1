@@ -4,7 +4,7 @@
 
 (1). (30 points) Write a program to explore this system by computing the effective gravity (a vector) and potential (a scalar) at specific grid points in the xy-plane. Use units such that the gravitational constant '''G ≡ 1'''. The program should take as input the mass of both bodies and their separation. You may “hardwire” the grid dimensions into your code if you wish. The output should be the potential and x and y components of the acceleration at each grid point.
 
-'''
+''' python3
 
 ########### Libraries ############
 import numpy as np
