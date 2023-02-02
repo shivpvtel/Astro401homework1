@@ -97,6 +97,7 @@ ax.set_aspect('equal', 'box')
 cs = ax.contour(x, y, np.log10(-p), 40)
 
 ########### Labels ############
+ax.set_title('Case 1: m1 = 3, m2 = 1, d = 1', size='x-large')
 ax.set_xlabel('X', size='x-large')
 ax.set_ylabel('Y', size='x-large')
 
