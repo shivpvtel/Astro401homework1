@@ -67,10 +67,9 @@ plt.show()
 
 (2). (20 points) Use your favorite plotting program to plot vectors (for the effective acceleration) and contours (for the effective potential) for the cases where m1 = 3, m2 = 1, d = 1 and m1 = 100 , m2 = 1, d = 1.
 
-\t For this question im going to be using Matplotlib. 
-\t Using the code below, I plotted both cases:
-   \t \t Case 1: m1 = 3,   m2 = 1, d = 1 
-   \t \t Case 2: m1 = 100, m2 = 1, d = 1
+   For this question im going to be using Matplotlib. Using the code below, I plotted both cases:
+        1. Case 1: m1 = 3,   m2 = 1, d = 1 
+        2. Case 2: m1 = 100, m2 = 1, d = 1
  
 ``` python
 ########### Libraries ############
@@ -135,8 +134,8 @@ plt.show()
 
 **Case 1**
 
- <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="800" height="800"/>
+ <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="400" height="400"/>
 
 **Case 2**
 
- <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%202/case2.jpeg" width="800" height="800"/>
+ <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%202/case2.jpeg" width="400" height="400"/>
