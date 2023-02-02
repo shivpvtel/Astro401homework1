@@ -138,4 +138,5 @@ plt.show()
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="800" height="800"/>
 
 **Case 2**
-case2.jpeg
+
+ <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%202/case2.jpeg" width="800" height="800"/>
