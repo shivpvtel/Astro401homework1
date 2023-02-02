@@ -132,5 +132,8 @@ plt.savefig('case3.jpeg')
 plt.show()
 ```
 
-*** Case 1 ***
+**Case 1**
+case1.jpeg
 
+**Case 2**
+case2.jpeg
