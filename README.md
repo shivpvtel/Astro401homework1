@@ -133,7 +133,7 @@ plt.show()
 ```
 
 **Case 1**
-case 1/case1.jpeg
+![Alt text](case 1/case1.jpg?raw=true "Case 1")
 
 **Case 2**
 case2.jpeg
