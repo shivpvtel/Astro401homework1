@@ -304,6 +304,6 @@ To figure out what was the ideal location for JWST i used the same code used to 
 
 I am also going to attach my C++ code (`main.cpp`) because i worked hard on it, and i belive my root finding algorithm was spot on. I worked alongside mohammed and he taught me new functions like the pair function and a couple other things that were neccassary for this Homework assingment. 
 
-
+ <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/jwst/JWST's%20Orbit.jpeg" width="400" height="400"/>
 
 
