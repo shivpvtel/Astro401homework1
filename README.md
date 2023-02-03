@@ -5,7 +5,23 @@ Consider two bodies of mass `m1` and `m2` separated by a distance `d` traveling 
 
 1. (30 points) Write a program to explore this system by computing the effective gravity (a vector) and potential (a scalar) at specific grid points in the xy-plane. Use units such that the gravitational constant `G ≡ 1`. The program should take as input the mass of both bodies and their separation. You may “hardwire” the grid dimensions into your code if you wish. The output should be the potential and x and y components of the acceleration at each grid point.
 
-So I first started my code in C++ but I could not get the gnuplot to work. My code was also not outputting the correct lagrangian points and format for Gnuplot (or the python code) to understand. During tuesday class Dr.Gulis' said that I need switch to python because she does not know how to use gnuplot. However, taking only CMPSC 121/122, I had no choice but to learn python within a matter of hours to figure out how to use it for my code. I used Dr.Gulis' Python code `two-body-potential-and-lagrangianpoints.py` now renamed to `Lagrange_Points_Data_Calc.py` to get the correct outputs as well as the `plot-potential-and-forcevector.py` which has been renamed to `Lagrange_Plotter_with_Contours.py`. For t
+So I first started my code in C++ but I could not get the gnuplot to work. My code was also not outputting the correct lagrangian points and format for Gnuplot (or the python code) to understand. During tuesday class Dr.Gulis' said that I need switch to python because she does not know how to use gnuplot. However, taking only CMPSC 121/122, I had no choice but to learn python within a matter of hours to figure out how to use it for my code. I used Dr.Gulis' Python code `two-body-potential-and-lagrangianpoints.py` now renamed to `Lagrange_Points_Data_Calc.py` to get the correct outputs as well as the `plot-potential-and-forcevector.py` which has been renamed to `Lagrange_Plotter_with_Contours.py `. For the the JWST's Orbit i edited `Lagrange_Plotter_with_Contours.py` to better graph the orbit for the earth and JWST (L2).
+
+I Versions I used in Jupyter notebook is:
+- IPython          : 7.31.1
+- ipykernel        : 6.15.2
+- ipywidgets       : 7.6.5
+- jupyter_client   : 7.3.4
+- jupyter_core     : 4.11.1
+- jupyter_server   : 1.18.1
+- jupyterlab       : 3.4.4
+- nbclient         : 0.5.13
+- nbconvert        : 6.4.4
+- nbformat         : 5.5.0
+- notebook         : 6.4.12
+- qtconsole        : 5.3.2
+- traitlets        : 5.1.1
+
 
 ``` python
 """
