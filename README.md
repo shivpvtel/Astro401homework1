@@ -279,7 +279,8 @@ plt.show()
  
  3. (20 points) Use a simple root solver to determine the locations of the Lagrange points for both these cases, using your a priori knowledge of their approximate locations (i.e., first do a search along the x axis for the L1, L2, and L3 points, then along the `x = (x1 + x2)/2` axis for the L4 and L5 points. Watch out for singularities!...).
  Using the rtbis function in the python code, we are able to calculate the lagrangian points.
- For case 1 the Lagrangian points are:   <br />
+
+For case 1 the Lagrangian points are:   <br />
      L1:  3.60743540E-01  0.00000000E+00  <br />
      L2:  1.26585852E+00  0.00000000E+00  <br />
      L3: -1.10316674E+00  0.00000000E+00  <br />
@@ -301,9 +302,15 @@ plt.show()
     
 To figure out what was the ideal location for JWST i used the same code used to plot in #2. In which L2 was the only spot that could JWST could be in to its solar shield to project itself from the sun, as well as the far enough to avoid the moons glare. to determine and plot this i used the `Lagrange_Points_Data_Calc.py` to calculate the Grid data as well as the Lagrange points, however for the inputs i converted to solar units so `m1 = 1` `m2 = 1/333000` because in the earth is 0.000003 times the suns mass. and `d=1` becasue it represented 1 AU. The code then outputted three files, `lagrange_grid.dat` which contained the x,y points, the gravitational accelaration and the gravatational potential, `lagrange_root.dat` which contained the lagrangian points in x,y coordinates, `lagrange_mass.dat` which contained the masses and out calculate inputs. I then used the `Lagrange_Plotter_with_Contours.py` but changed it up to better fit my plot and named it `JWST_Orbit_Plotter.py`. I added circles to represent the orbits of the earth (depicted in the teal circle) and I added another circle in light green that depicted the L2 orbit. Again I had no idea how to use python so I had to google how to draw a circle and the reference link I used is commented out in the code it self.  Below you will find the plot depicting the orbit of JWST from a top down view of our solar system.
 
+The Lagrangian points for this plot was:
+- L1:  8.48624046E-01  0.00000000E+00
+- L2:  1.14632026E+00  0.00000000E+00
+- L3: -1.00412446E+00  0.00000000E+00
+- L4:  4.90099010E-01  8.66025061E-01
+- L5:  4.90099010E-01 -8.66025061E-01
 
-I am also going to attach my C++ code (`main.cpp`) because i worked hard on it, and i belive my root finding algorithm was spot on. I worked alongside mohammed and he taught me new functions like the pair function and a couple other things that were neccassary for this Homework assingment. 
 
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/jwst/JWST's%20Orbit.jpeg" width="400" height="400"/>
 
 
+I am also going to attach my C++ code (`main.cpp`) because i worked hard on it, and i belive my root finding algorithm was spot on. I worked alongside mohammed and he taught me new functions like the pair function and a couple other things that were neccassary for this Homework assingment. 
