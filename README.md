@@ -1,4 +1,4 @@
-# Astro 401 - Homework #1
+# Astro 410 - Homework #1
 
 ****Question:**** <br />
 Consider two bodies of mass `m1` and `m2` separated by a distance `d` traveling in circular orbits around their mutual center of mass. Take the angular momentum vector of the system to be pointing in the `+z` direction. In a frame that co-rotates with the orbital motion there are five locations (called the Lagrange points) where the effective acceleration felt by a test particle vanishes. The acceleration arises from the gravity due to `m1` and `m2` plus the rotation of the system as a whole. If the masses are at points `x1 < x2` on the x axis (so `d = x2 −  x1`),then by convention `L3 < x1 < L1 < x2 < L2`. The `L4` and `L5` points lie off the x axis and form equilateral triangles with the points `x1` and `x2`. Conventionally, `L4` is taken to be in the `+y` direction, `L5` in the `−y` direction.
