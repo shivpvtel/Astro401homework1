@@ -168,7 +168,7 @@ with open(GRID_FILE, 'w') as f:
             ir23 = isqrtr22 / r22
             gx = gravx(ir13, ir23, x, y)
             gy = gravy(ir13, ir23, x, y)
-            p = - m1 * isqrtr12 - m2 * isqrtr22 - 0.5 * w2 * r2  ## This is the Gravitational accelaration.
+            p = - m1 * isqrtr12 - m2 * isqrtr22 - 0.5 * w2 * r2  ## This is the Gravitational accelaration equation
             f.write('%15.8E %15.8E %15.8E %15.8E %15.8E\n' % (x, y, p, gx, gy))
 
 
@@ -278,7 +278,7 @@ plt.show()
  
  
  3. (20 points) Use a simple root solver to determine the locations of the Lagrange points for both these cases, using your a priori knowledge of their approximate locations (i.e., first do a search along the x axis for the L1, L2, and L3 points, then along the `x = (x1 + x2)/2` axis for the L4 and L5 points. Watch out for singularities!...).
- Using the rtbis fucntion in the python code we are able to calculate the lagrangian points.
+ Using the rtbis function in the python code, we are able to calculate the lagrangian points.
  For case 1 the Lagrangian points are:   <br />
      L1:  3.60743540E-01  0.00000000E+00  <br />
      L2:  1.26585852E+00  0.00000000E+00  <br />
@@ -287,7 +287,7 @@ plt.show()
      L5:  2.50000000E-01 -8.66025061E-01 <br />
     <br />
  
- For case 1 the Lagrangian points are:   <br />
+ For case 2 the Lagrangian points are:   <br />
      L1:  8.48624046E-01  0.00000000E+00 <br />
      L2:  1.14632026E+00  0.00000000E+00 <br />
      L3: -1.00412446E+00  0.00000000E+00 <br />
@@ -299,15 +299,7 @@ plt.show()
 
 4. (30 points) The James Webb Space Telescope was successfully launched on 12/24/2021. It is the largest and the most complex telescope ever launched into space. It will observe primarily the infrared light from faint and very distant objects. But all objects, including telescopes, also emit infrared light. To avoid swamping the very faint astronomical sig- nals with radiation from the telescope, the telescope and its instruments must be very cold. Therefore, JWST has a large shield that blocks the light from the Sun, Earth, and Moon. To have this work, JWST must be in an orbit where all three of these objects are in about the same direction. Please calculate and plot the ideal location and orbit for JWST.
     
-
-
-
-
-
-
-
-
-
+To figure out what was the ideal location for JWST i used the same code used to plot in #2. In which L2 was the only spot that could JWST could be in to its solar shield to project itself from the sun, as well as the far enough to avoid the moons glare. to determine and plot this i used the `Lagrange_Points_Data_Calc.py` to calculate the Grid data as well as the Lagrange points, however for the inputs i converted to solar units so `m1 = 1` `m2 = 1/333000` because in the earth is 0.000003 times the suns mass. and `d=1` becasue it represented 1 AU. The code then outputted three files, `lagrange_grid.dat` which contained the x,y points, the gravitational accelaration and the gravatational potential, `lagrange_root.dat` which contained the lagrangian points in x,y coordinates, `lagrange_mass.dat` which contained the masses and out calculate inputs. I then used the
 
 
 
