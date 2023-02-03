@@ -7,7 +7,7 @@ Consider two bodies of mass `m1` and `m2` separated by a distance `d` traveling 
 
 So I first started my code in C++ but I could not get the gnuplot to work. My code was also not outputting the correct lagrangian points and format for Gnuplot (or the python code) to understand. During tuesday class Dr.Gulis' said that I need switch to python because she does not know how to use gnuplot. However, taking only CMPSC 121/122, I had no choice but to learn python within a matter of hours to figure out how to use it for my code. I used Dr.Gulis' Python code `two-body-potential-and-lagrangianpoints.py` now renamed to `Lagrange_Points_Data_Calc.py` to get the correct outputs as well as the `plot-potential-and-forcevector.py` which has been renamed to `Lagrange_Plotter_with_Contours.py `. For the the JWST's Orbit i edited `Lagrange_Plotter_with_Contours.py` to better graph the orbit for the earth and JWST (L2).
 
-I Versions I used in Jupyter notebook is:
+I versions I used in Jupyter notebook is:
 - IPython          : 7.31.1
 - ipykernel        : 6.15.2
 - ipywidgets       : 7.6.5
@@ -22,6 +22,7 @@ I Versions I used in Jupyter notebook is:
 - qtconsole        : 5.3.2
 - traitlets        : 5.1.1
 
+Dr.Gulis' code was writen using Python but im not sure if it was Python3 (I dont know anything in python). My code will have comments that explain the equations.
 
 ``` python
 """
@@ -66,11 +67,11 @@ mTotal = mSun + mEarth
 
 ########### Calculations ############
 
-m = m1 + m2
-w2 = m / (d ** 3)
-x1 = -m2 * d / m
-x2 = m1 * d / m
-xc = 0.5 * (x1 + x2)
+m = m1 + m2  ## This is the total Mass which is dominated by the suns mass
+w2 = m / (d ** 3) ## this is the angular momentum 
+x1 = -m2 * d / m  ## center of mass for x1
+x2 = m1 * d / m   ## center of mass for x2
+xc = 0.5 * (x1 + x2) #3 midpoint between x1 and x2
 
 ########### Root finding algorithm ############
 
@@ -87,10 +88,10 @@ def RootFindingAlgo(f, xOne, xTwo, tol):
         return RootFindingAlgo(f, xOne, root, tol)
     elif np.abs(f(root)) < tol:
         return root
-""" 
+""" ### This is a rootfinding algorithm that I tried to make but i did not implement it
 
 def rtbis(f, xlo, xhi, eps):
-    flo = f(xlo)
+    flo = f(xlo)    
     iter = 0
     while (xhi - xlo > 0.5 * eps * abs(xlo + xhi)):
         iter = iter + 1
@@ -118,28 +119,28 @@ def rtbis(f, xlo, xhi, eps):
 ########### Grav x function ############
 def gravx(ir13, ir23, x, y):
     return -m1 * (x - x1) * ir13 - m2 * (x - x2) * ir23 + w2 * x
+    
+    ## This equation is the gravitational acceleration in the x direction
 
 ########### Grav y function ############
 def gravy(ir13, ir23, x, y):
     return -m1 * y * ir13 - m2 * y * ir23 + w2 * y
-
-
+  ## This equation is the gravitational acceleration in the x direction
+  
+  
 def fx(x):
-    r12 = (x - x1) ** 2
+    r12 = (x - x1) ** 2 
     r22 = (x - x2) ** 2
     return gravx(1 / r12 ** 1.5, 1 / r22 ** 1.5, x, 0.0)
-
 
 def fy(y):
     r12 = (xc - x1) ** 2 + y ** 2
     r22 = (xc - x2) ** 2 + y ** 2
     return gravy(1 / r12 ** 1.5, 1 / r22 ** 1.5, xc, y)
 
-
-
 ########### Writing Data to File ############
 
-    """NEW CODE"""
+    """NEW CODE"""  ## this set of code was part of the new python file Dr.Gulis sent out
 print('writting mass data to %s'%MASS_FILE)
 with open(MASS_FILE, 'w') as f:
     f.write('%12.5E\n'%m1)
@@ -148,7 +149,8 @@ with open(MASS_FILE, 'w') as f:
     f.write('%12.5E\n'%x2)
     """NEW CODE ENDS"""
 
-print('Writing grid data to %s' % GRID_FILE)
+print('Writing grid data to %s' % GRID_FILE)  
+## This function iterates through the plot and its components and writes the output of the calculations to the .dat file.
 xg = arange(XMIN, XMAX + 0.1 * DX, DX)
 yg = arange(YMIN, YMAX + 0.1 * DY, DY)
 with open(GRID_FILE, 'w') as f:
@@ -166,12 +168,12 @@ with open(GRID_FILE, 'w') as f:
             ir23 = isqrtr22 / r22
             gx = gravx(ir13, ir23, x, y)
             gy = gravy(ir13, ir23, x, y)
-            p = - m1 * isqrtr12 - m2 * isqrtr22 - 0.5 * w2 * r2
+            p = - m1 * isqrtr12 - m2 * isqrtr22 - 0.5 * w2 * r2  ## This is the Gravitational accelaration.
             f.write('%15.8E %15.8E %15.8E %15.8E %15.8E\n' % (x, y, p, gx, gy))
 
 
 print('writing lagrange points to %s' % ROOT_FILE)
-
+## This outputs the calculated lagrangian points using the root finding algorithm
 with open(ROOT_FILE, 'w') as f:
     # L1: on x axis, between x1 and x2
         print('L1')
@@ -263,11 +265,12 @@ plt.savefig('case3.jpeg')
 plt.show()
 ```
 
-**Case 1**
+**Case 1:** This case shows the lagrangian points when the sun's mass is set to '3' and the earth is set to '1' giving us 5 Lagrange points. 3 of which (L1,L2,L3) lie on the x-axis and L4 lies in quadrant 1 and L5 lies in quadrant 4.
+
 
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="400" height="400"/>
 
-**Case 2**  <br />
+**Case 2:** This case shows the lagrangian points when the sun's mass is set to '100' and the earth is set to '1' giving us 5 Lagrange points as well.
 
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%202/case2.jpeg" width="400" height="400"/>
   <br />
@@ -275,7 +278,7 @@ plt.show()
  
  
  3. (20 points) Use a simple root solver to determine the locations of the Lagrange points for both these cases, using your a priori knowledge of their approximate locations (i.e., first do a search along the x axis for the L1, L2, and L3 points, then along the `x = (x1 + x2)/2` axis for the L4 and L5 points. Watch out for singularities!...).
- 
+ Using the rtbis fucntion in the python code we are able to calculate the lagrangian points.
  For case 1 the Lagrangian points are:   <br />
      L1:  3.60743540E-01  0.00000000E+00  <br />
      L2:  1.26585852E+00  0.00000000E+00  <br />
@@ -283,6 +286,7 @@ plt.show()
      L4:  2.50000000E-01  8.66025061E-01 <br />
      L5:  2.50000000E-01 -8.66025061E-01 <br />
     <br />
+ 
  For case 1 the Lagrangian points are:   <br />
      L1:  8.48624046E-01  0.00000000E+00 <br />
      L2:  1.14632026E+00  0.00000000E+00 <br />
@@ -291,10 +295,10 @@ plt.show()
      L5:  4.90099010E-01 -8.66025061E-01 <br />
     <br />  
     <br />
-   <br />
+    <br />
 
 4. (30 points) The James Webb Space Telescope was successfully launched on 12/24/2021. It is the largest and the most complex telescope ever launched into space. It will observe primarily the infrared light from faint and very distant objects. But all objects, including telescopes, also emit infrared light. To avoid swamping the very faint astronomical sig- nals with radiation from the telescope, the telescope and its instruments must be very cold. Therefore, JWST has a large shield that blocks the light from the Sun, Earth, and Moon. To have this work, JWST must be in an orbit where all three of these objects are in about the same direction. Please calculate and plot the ideal location and orbit for JWST.
-
+    
 
 
 
