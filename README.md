@@ -302,7 +302,7 @@ plt.show()
 To figure out what was the ideal location for JWST i used the same code used to plot in #2. In which L2 was the only spot that could JWST could be in to its solar shield to project itself from the sun, as well as the far enough to avoid the moons glare. to determine and plot this i used the `Lagrange_Points_Data_Calc.py` to calculate the Grid data as well as the Lagrange points, however for the inputs i converted to solar units so `m1 = 1` `m2 = 1/333000` because in the earth is 0.000003 times the suns mass. and `d=1` becasue it represented 1 AU. The code then outputted three files, `lagrange_grid.dat` which contained the x,y points, the gravitational accelaration and the gravatational potential, `lagrange_root.dat` which contained the lagrangian points in x,y coordinates, `lagrange_mass.dat` which contained the masses and out calculate inputs. I then used the `Lagrange_Plotter_with_Contours.py` but changed it up to better fit my plot. I added circles to represent the orbits of the earth (depicted in the teal circle) and I added another circle in light green that depicted the L2 orbit. Again I had no idea how to use python so I had to google how to draw a circle and the reference link I used is commented out in the code it self.  Below you will find the plot depicting the orbit of JWST from a top down view of our solar system.
 
 
-
+I am also going to attach my C++ code because i worked hard on it, and i belive my root finding algorithm was spot on. I worked alongside mohammed and he taught me new functions like the pair function and a couple other things that were neccassary for this Homework assingment. 
 
 
 
