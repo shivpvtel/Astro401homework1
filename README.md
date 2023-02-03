@@ -249,9 +249,14 @@ plt.show()
 
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%201/case1.jpeg" width="400" height="400"/>
 
-**Case 2**
+**Case 2**  <br />
 
  <img src="https://github.com/shivpvtel/Astro401homework1/blob/main/case%202/case2.jpeg" width="400" height="400"/>
+  <br />
+   <br />
+ 
+ 
+ (3). (20 points) Use a simple root solver to determine the locations of the Lagrange points for both these cases, using your a priori knowledge of their approximate locations (i.e., first do a search along the x axis for the L1, L2, and L3 points, then along the `x = (x1 + x2)/2` axis for the L4 and L5 points. Watch out for singularities!...).
  
  
  
