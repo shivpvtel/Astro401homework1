@@ -259,16 +259,16 @@ plt.show()
  (3). (20 points) Use a simple root solver to determine the locations of the Lagrange points for both these cases, using your a priori knowledge of their approximate locations (i.e., first do a search along the x axis for the L1, L2, and L3 points, then along the `x = (x1 + x2)/2` axis for the L4 and L5 points. Watch out for singularities!...).
  
  For case 1 the Lagrangian points are:   <br />
-    > L1:  3.60743540E-01  0.00000000E+00
-    > L2:  1.26585852E+00  0.00000000E+00
-    > L3: -1.10316674E+00  0.00000000E+00
-    > L4:  2.50000000E-01  8.66025061E-01
-    > L5:  2.50000000E-01 -8.66025061E-01
+    > L1:  3.60743540E-01  0.00000000E+00  <br />
+    > L2:  1.26585852E+00  0.00000000E+00  <br />
+    > L3: -1.10316674E+00  0.00000000E+00  <br />
+    > L4:  2.50000000E-01  8.66025061E-01 <br />
+    > L5:  2.50000000E-01 -8.66025061E-01 <br />
     <br />
  For case 1 the Lagrangian points are:   <br />
-    > L1:  8.48624046E-01  0.00000000E+00
-    > L2:  1.14632026E+00  0.00000000E+00
-    > L3: -1.00412446E+00  0.00000000E+00
-    > L4:  4.90099010E-01  8.66025061E-01
-    > L5:  4.90099010E-01 -8.66025061E-01
+    > L1:  8.48624046E-01  0.00000000E+00 <br />
+    > L2:  1.14632026E+00  0.00000000E+00 <br />
+    > L3: -1.00412446E+00  0.00000000E+00 <br />
+    > L4:  4.90099010E-01  8.66025061E-01 <br />
+    > L5:  4.90099010E-01 -8.66025061E-01 <br />
     <br />
