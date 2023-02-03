@@ -5,7 +5,7 @@ Consider two bodies of mass `m1` and `m2` separated by a distance `d` traveling 
 
 (1). (30 points) Write a program to explore this system by computing the effective gravity (a vector) and potential (a scalar) at specific grid points in the xy-plane. Use units such that the gravitational constant `G ≡ 1`. The program should take as input the mass of both bodies and their separation. You may “hardwire” the grid dimensions into your code if you wish. The output should be the potential and x and y components of the acceleration at each grid point.
 
-So I first started my code in C++ but I could not get the gnuplot to work. My code was also not outputting the correct lagrangian points and format for Gnuplot (or the python code) to understand. During tuesday class professor gulis said that I should switch to python and I had no choice but to learn python within a day to figure out how to code in it. I used Professor Gulis Python code 'two-body-potential-and-lagrangianpoints.py' now renamed to ' n to get the correct outputs as well as the 
+So I first started my code in C++ but I could not get the gnuplot to work. My code was also not outputting the correct lagrangian points and format for Gnuplot (or the python code) to understand. During tuesday class professor gulis said that I should switch to python and I had no choice but to learn python within a day to figure out how to code in it. I used Professor Gulis Python code `two-body-potential-and-lagrangianpoints.py` now renamed to `Lagrange_Points_Data_Calc.py` to get the correct outputs as well as the `plot-potential-and-forcevector.py` which has been renamed to `Lagrange_Plotter_with_Contours.py`
 
 ``` python
 """
